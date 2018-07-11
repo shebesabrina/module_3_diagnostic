@@ -22,5 +22,10 @@ describe 'User searches a specific zip code' do
   expect(page).to have_content('Electric')
   expect(page).to have_content('Propane')
   # And for each of the stations I should see Name, Address, Fuel Types, Distance, and Access Times
+  expect(page).to have_content(response.name)
+  expect(page).to have_content(response.address)
+  expect(page).to have_content(response.fuel_type)
+  expect(page).to have_content(response.distance)
+  expect(page).to have_content(response.access_times)
   end
 end
